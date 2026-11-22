@@ -18,3 +18,8 @@
 3. `python tools/build_photos.py <工作資料夾> index.html`（需要 Pillow）
 
 代號與行程的對應在 `index.html` 的 `PMAP`（地圖關鍵字 → 照片代號）。
+
+## 兩種版型
+
+- `index.html`：依功能分頁（行程／天氣／美食…），每頁裡再選日期。
+- `by-day.html`：依天分頁（Day 1～9），每天裡再分行程／天氣／美食／購物／退稅／住宿／訂票。由 `python tools/build_byday.py` 從 `index.html` 組出來（共用插畫、照片、資料；分頁邏輯在 `tools/byday_tail.js`），改資料後要重跑。
